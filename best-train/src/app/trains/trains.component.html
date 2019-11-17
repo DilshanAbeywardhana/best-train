@@ -1,0 +1,27 @@
+<div style="text-align: center;">
+    <img src="../assets/attachment_logo_lyst4516.png" alt="logo" height="100" width="100" class="logo" />
+    <h1 class="app-title">Best Train</h1>
+
+    <div class="Container">
+      <input type="text" class="input-text" placeholder="Starting place"[(ngModel)] = "startpoint" (input)= "Search()" />
+      <br><br>
+      <div style="text-align: center;">
+          <table class="table">
+              <tr>
+                <th>Id</th>
+                <th>Train Name</th>
+                <th>Start point</th>
+                <th>Time</th>
+              </tr>
+              <tr  *ngFor="let o of train">
+                <td>{{o.id}}</td>
+                <td>{{o.trainName}}</td>
+                <td>{{o.startpoint}}</td>
+                <td>{{o.time}}</td>
+              </tr>
+            </table>
+      </div>
+    </div>
+    <br><br>
+    <button class="add-btn">Log as admin</button>
+  </div>
